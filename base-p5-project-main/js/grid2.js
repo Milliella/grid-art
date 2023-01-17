@@ -17,6 +17,7 @@ function setup() {
     noStroke()
     while(y < height){
         while(x < width){
+            tint(random(255))
             let t = random(textures);
             image(t, x, y, CELL_SIZE)
             x+=CELL_SIZE;
