@@ -1,4 +1,5 @@
 let textures = [];
+let colours;
 function preload(){
     let texturesNum = 4;
     for(let i = 1; i <= texturesNum;i++){
@@ -10,6 +11,7 @@ function preload(){
 
 }
 function setup() {
+    let colours = [color(`#DDF8E8`), color(`#CDD5D1`), color(`#B4A6AB`), color(`#946E83`), color(`#615055`), color(`#08415C`), color(`#5F1A37`), color(`#36413E`)];
     createCanvas (800, 800);
     const CELL_SIZE = 80;
     let x =0;
@@ -17,11 +19,11 @@ function setup() {
     noStroke()
     while(y < height){
         while(x < width){
-            tint(random(255))
+            tint(random(colours))
             let t = random(textures);
-            image(t, x, y, CELL_SIZE)
+            rotate(random(PI))
+            image(t, x+random(-3, 2), y+random(-3, 2), CELL_SIZE+random(-10, 10), CELL_SIZE+random(-10, 10))
             x+=CELL_SIZE;
-
         }
         y+=CELL_SIZE;
         x =0;

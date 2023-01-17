@@ -1,7 +1,6 @@
-
 function setup() {
     const CELL_SIZE = 40;
-    createCanvas(800, 800);
+    createCanvas(1500, 1500);
     background(255);
     //noStroke();
     let x = 0;
@@ -42,4 +41,3 @@ function setup() {
 }
 function draw() {
 }
-
