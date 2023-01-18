@@ -1,29 +1,44 @@
-function setup(){
-    createCanvas(600, 600);
-    background('#000');
-
-}
-const PADDING = 50;
-const ROWS = 20;
-const COLUMNS = 20;
-const CELL_SIZE = 10;
-const CELL_COLOR = '#222';
-const CANVAS_WIDTH = 300;
-const CANVAS_HEIGHT = 300;
-const CANVAS_COLOR = '#000';
 
 function setup() {
-    createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
-    background(CANVAS_COLOR);
-    noStroke();
-  
-    fill(CELL_COLOR);
-    for (let col=0;col<COLUMNS;col++) {
-      for (let row=0;row<ROWS;row++) {
-        let left = PADDING+(col*CELL_SIZE);
-        let top = PADDING+(row*CELL_SIZE);
-        let size = CELL_SIZE - 2;
-        rect(left,top,size,size);
-      }
+    const CELL_SIZE = 40;
+    createCanvas(500, 500);
+    background(255);
+    //noStroke();
+    let x = 0;
+    let y = 0;
+    let xVariation = 5;
+    let yVariation = 10;
+    let widthVariation = 10;
+    let heightVariation = 20;
+    let sizes = [CELL_SIZE, CELL_SIZE * 2, CELL_SIZE * 3];
+    let currentWidth = random(sizes);
+    let currentHeight = random(sizes);
+    let colours = [color(`#D81E5B`), color('#bc3917'), color('#1b1f2a'), color('#d8a91d')];
+    strokeWeight(5);
+    while (y < height) {
+        while (x < width) {
+            fill(random(colours));
+            // rect(x+random(-xVariation, xVariation),y + random(-yVariation, yVariation),
+            // CELL_SIZE + random(-widthVariation, widthVariation), CELL_SIZE + random
+            // (-heightVariation, heightVariation));
+            rect(x, y, currentWidth, currentHeight);
+            x += currentWidth;
+            let availableWidth = width - x;
+            currentWidth = random(sizes);
+            while (currentWidth > availableWidth) {
+                currentWidth -= CELL_SIZE;
+            }
+
+        }
+
+        y += currentHeight;
+        let availableHeight = height - y;
+        currentHeight = random(sizes);
+        while (currentHeight > availableHeight) {
+            currentHeight -= CELL_SIZE;
+        }
+        x = 0;
     }
-  }
+}
+function draw() {
+}
