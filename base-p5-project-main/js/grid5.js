@@ -1,7 +1,7 @@
 
 function setup() {
     const CELL_SIZE = 20;
-    createCanvas(600, 600);
+    createCanvas(650, 650);
     noStroke();
     let x = 0;
     let y = 0;
@@ -12,7 +12,7 @@ function setup() {
     let sizes = [CELL_SIZE, CELL_SIZE * 4, CELL_SIZE * 4];
     let currentWidth = 20;
     let currentHeight = 20;
-    let colours = [color(`#8e7a40`), color('#323833'), color('#9d91b6'), color('#d1b051'), color(`#9f9985`), color(`#d6c962`), color(`#b3a94d`), color(`#5c6734`), color(`#713641`)];
+    let colours = [color(`#678677`), color('#cab993'), color('#1a253e'), color('#7f99c8'), color(`#9f956f`), color(`#234a5a`), color(`#a4c8a8`), color(`#696321`), color(`#494d5b`)];
     strokeWeight(5);
     while (y < height) {
         while (x < width) {
@@ -20,7 +20,7 @@ function setup() {
             rect(x, y, currentWidth, currentHeight);
             x += currentWidth;
             let availableWidth = width - x;
-            currentWidth = 50;
+            currentWidth = 5;
             while (currentWidth > availableWidth) {
                 currentWidth -= CELL_SIZE;
             }
@@ -28,7 +28,7 @@ function setup() {
         }
         y += currentHeight;
         let availableHeight = height - y;
-        currentHeight = 50;
+        currentHeight = 5;
         while (currentHeight > availableHeight) {
             currentHeight -= CELL_SIZE;
         }
@@ -37,4 +37,3 @@ function setup() {
 }
 function draw() {
 }
-
