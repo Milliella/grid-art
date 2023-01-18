@@ -1,9 +1,9 @@
 
 function setup() {
     const CELL_SIZE = 40;
-    createCanvas(500, 500);
+    createCanvas(800, 800);
     background(255);
-    //noStroke();
+    noStroke();
     let x = 0;
     let y = 0;
     let xVariation = 5;
@@ -13,7 +13,7 @@ function setup() {
     let sizes = [CELL_SIZE, CELL_SIZE * 2, CELL_SIZE * 3];
     let currentWidth = random(sizes);
     let currentHeight = random(sizes);
-    let colours = [color(`#D81E5B`), color('#bc3917'), color('#1b1f2a'), color('#d8a91d')];
+    let colours = [color(`#8e7a40`), color('#323833'), color('#9d91b6'), color('#d1b051'), color(`#9f9985`), color(`#d6c962`), color(`#b3a94d`), color(`#5c6734`), color(`#713641`)];
     strokeWeight(5);
     while (y < height) {
         while (x < width) {
