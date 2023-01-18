@@ -2,8 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
-  display: flex;
+  background-color: rgb(247, 201, 36);
+  display: flex; 
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -11,5 +11,5 @@ body {
 }
 canvas {
   display: block;
-  outline: 10px solid white;
+  /* outline: 10px solid white; */
 }
