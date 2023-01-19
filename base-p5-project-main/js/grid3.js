@@ -141,12 +141,12 @@
 
 function setup() {
     const CELL_SIZE = 160;
-    createCanvas(1000, 1000);
+    createCanvas(800, 800);
     background(255);
     //noStroke();
     let x = 0;
     let y = 0;
-    let xVariation = 5;
+    let xVariation = 10;
     let yVariation = 10;
     let widthVariation = 10;
     let heightVariation = 20;
