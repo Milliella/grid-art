@@ -1,30 +1,39 @@
+
 function setup() {
-    const CELL_SIZE = 20;
     createCanvas(800, 800);
-    background(13);
-    let x = 0;
-    let y = 0;
-    let xVariation = 10;
-    let yVariation = 10;
-    let widthVariation = 10;
-    let heightVariation = 20;
-    let colours = [color(`#D81E5B`), color('#bc3917'), color('#1b1f2a'), color('#d8a91d')];
-    strokeWeight(5);
-    while (y < height) {
-        while (x < width) {
-            fill(random(colours));
-            rect(x, y, CELL_SIZE, CELL_SIZE);
-            fill(random(colours));
-            ellipse(x + CELL_SIZE / 2, y + CELL_SIZE / 2, CELL_SIZE); //move these two (elipse + fill) and the same for the other two out of the if statement to have the original code back
-            fill(random(colours));
-            triangle(x, y, x + CELL_SIZE, y, x + CELL_SIZE / 2, y + CELL_SIZE);
-
-
-        }
-
-        y += CELL_SIZE;
-        x = 0;
+    noLoop();
+    noStroke();
+  }
+  
+  function draw() {
+    // background(0, 255, 100);
+  
+    const columns = 20;
+    const rows = 50;
+    const cellWidth = width / columns;
+    const cellHeight = height / rows;
+  
+    for (let c = 0; c < columns; c++) {
+      for (let r = 0; r < rows; r++) {
+        const x = c * cellWidth + cellWidth / 200;
+        const y = r * cellHeight + cellHeight / 200;
+  
+        drawFlower(x, y, min(cellWidth, cellHeight));
+      }
     }
-}
-function draw() {
-}
+  }
+  
+  function drawFlower(x, y, size) {
+    const flowerSize = random(size * .20, size * 10);
+    const petalSize = flowerSize / 8;
+    const spacing = petalSize / 9;
+  
+    fill(random(255), random(255), random(255));
+    square(x - spacing, y - spacing, petalSize);
+    square(x + spacing, y - spacing, petalSize);
+    square(x - spacing, y + spacing, petalSize);
+    square(x + spacing, y + spacing, petalSize);
+  
+    fill(random(255), random(255), random(255));
+    square(x, y, petalSize);
+  }
