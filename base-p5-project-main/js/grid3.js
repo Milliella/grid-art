@@ -39,60 +39,7 @@
 // function draw() {
 // }
 
-// function setup() {
-//     createCanvas(1200, 1200);
-//     noLoop();
-//     noStroke();
-//     strokeWeight();
-//   }
 
-//   function draw() {
-//     background(255);
-
-//     const columns = 20;
-//     const rows = 20;
-//     const cellWidth = width / columns;
-//     const cellHeight = height / rows;
-
-//     for (let c = 0; c < columns; c++) {
-//       for (let r = 0; r < rows; r++) {
-//         const x = c * cellWidth + cellWidth / 15;
-//         const y = r * cellHeight + cellHeight / 15;
-
-//         drawFlower(x, y, min(cellWidth, cellHeight));
-//       }
-//     }
-//   }
-
-//   function drawFlower(x, y, size) {
-//     const flowerSize = random(size * .5, size * .95);
-//     const petalSize = flowerSize / 2;
-//     const spacing = petalSize / 2;
-
-//     fill(random(255), random(255), random(255));
-//     circle(x - spacing, y - spacing, petalSize);
-//     circle(x + spacing, y - spacing, petalSize);
-//     circle(x - spacing, y + spacing, petalSize);
-//     circle(x + spacing, y + spacing, petalSize);
-
-//     fill(random(255), random(255), random(255));
-//     circle(x, y, petalSize);
-//   }
-
-// function setup() {
-//     createCanvas(1000, 1000);
-//   }
-
-//   function draw() {
-//     background(100);
-//     strokeWeight(3);
-
-//     for (let circleY = 20; circleY <= 225; circleY += 20) {
-//       for (let circleX = 20; circleX <= 225; circleX += 20) {
-//         circle(circleX, circleY, 20);
-//       }
-//     }
-//   }
 
 // original code for grid 1:
 // function setup() {
