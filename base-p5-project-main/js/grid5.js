@@ -50,8 +50,8 @@ function draw(){
     
     for (let c = 0; c < columns; c++){
         for (let r = 0; r < rows; r++){
-            const x = c * cellWidth + cellWidth / 10;
-            const y = r * cellHeight + cellHeight / 10;
+            const x = c * cellWidth;
+            const y = r * cellHeight;
 
             drawSquear(x,y, min(cellWidth, cellHeight));
         }
@@ -62,13 +62,9 @@ function draw(){
 function drawSquear(x,y, size){
     const squearSize = random(size * .10, size * 5);
     const squareSize = squearSize / 9;
-    const spacing = squareSize / 9;
+    const placement = squareSize / 9;
 
-    fill(random(255), random(255), random(255));
-    ellipse(x - spacing, y - spacing, squareSize);
-    square(x + spacing, y - spacing, squareSize);
-    ellipse(x - spacing, y + spacing, squareSize);
-    square(x + spacing, y + spacing, squareSize);
+    ellipse(x - placement, y - placement, squareSize);
 
     fill(random(255), random(255), random(255));
     square(x, y, squareSize);
