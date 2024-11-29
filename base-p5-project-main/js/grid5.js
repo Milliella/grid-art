@@ -43,8 +43,8 @@ function setup(){
 }
 
 function draw(){
-    const columns = 5;
-    const rows = 5;
+    const columns = 15;
+    const rows = 17;
     const cellWidth = width / columns;
     const cellHeight = height / rows;
     
@@ -60,13 +60,17 @@ function draw(){
 }
 
 function drawSquear(x,y, size){
-    const squearSize = random(size * .10, size * 5);
-    const squareSize = squearSize / 9;
-    const placement = squareSize / 9;
+    const squearSize = random(size * 9, size * 5);
+    const squareSize = squearSize / 10;
+    const placement = squareSize / 5;
 
-    ellipse(x - placement, y - placement, squareSize);
-
-    fill(random(255), random(255), random(255));
-    square(x, y, squareSize);
+    fill(random(255), random(), random(255));
+    square( x, y, squareSize);
 }
+ 
+
+    // ellipse(x - placement, y - placement, squareSize);
+
+//     fill(random(255), random(), random(255));
+//     square(x, y, squareSize);
 

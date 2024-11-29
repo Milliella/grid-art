@@ -6,9 +6,9 @@ function setup() {
   }
   
   function draw() {
-    // background(0, 255, 100);
+   
   
-    const columns = 20;
+    const columns = 30;
     const rows = 50;
     const cellWidth = width / columns;
     const cellHeight = height / rows;
@@ -24,16 +24,16 @@ function setup() {
   }
   
   function drawFlower(x, y, size) {
-    const flowerSize = random(size * .20, size * 10);
-    const petalSize = flowerSize / 8;
-    const spacing = petalSize / 9;
+    const flowerSize = random(size * 15, size *15);
+    const petalSize = flowerSize / 35;
+    const spacing = petalSize / 2;
   
     fill(random(255), random(255), random(255));
-    square(x - spacing, y - spacing, petalSize);
-    square(x + spacing, y - spacing, petalSize);
-    square(x - spacing, y + spacing, petalSize);
-    square(x + spacing, y + spacing, petalSize);
+    circle(x - spacing, y - spacing, petalSize);
+    circle(x + spacing, y - spacing, petalSize);
+    circle(x - spacing, y + spacing, petalSize);
+    circle(x + spacing, y + spacing, petalSize);
   
     fill(random(255), random(255), random(255));
-    square(x, y, petalSize);
+    circle(x, y, petalSize);
   }
