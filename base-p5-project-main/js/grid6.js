@@ -24,7 +24,7 @@ function setup() {
   }
   
   function drawFlower(x, y, size) {
-    const flowerSize = random(size * 15, size *15);
+    const flowerSize = random(size * 25, size * 25);
     const petalSize = flowerSize / 35;
     const spacing = petalSize / 2;
   
@@ -37,3 +37,16 @@ function setup() {
     fill(random(255), random(255), random(255));
     circle(x, y, petalSize);
   }
+function mousePressed() {
+    redraw();
+  }
+
+  function keyPressed() {
+    if (key === 's' || key === 'S') {
+      saveCanvas('grid6', 'png');
+    }
+    if (key === 'r' || key === 'R') {
+      redraw();
+    
+      }
+}

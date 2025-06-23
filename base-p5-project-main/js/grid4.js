@@ -35,7 +35,5 @@ function setup() {
         x = 0;
     }
 }
-function draw() {
-}
 
 
